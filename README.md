@@ -1,1 +1,1 @@
-# tallyplus-privacy
+# cameproof-privacy
