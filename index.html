@@ -318,17 +318,17 @@
             <li><strong>Camera (NSCameraUsageDescription):</strong> Required exclusively to stream real-time viewfinders and capture high-resolution photo and video evidence.</li>
             <li><strong>Location (NSLocationWhenInUseUsageDescription):</strong> Used strictly while the camera is active to calculate verified latitude, longitude, and reverse-geocode physical street addresses onto the visual watermark ribbon. Location is never tracked in the background.</li>
             <li><strong>Microphone (NSMicrophoneUsageDescription):</strong> Required to record audio during video proof capture. Audio is processed on-device and never sent to external servers.</li>
-            <li><strong>Photo Library (NSPhotoLibraryUsageDescription & NSPhotoLibraryAddUsageDescription):</strong> Required to automatically save your captured proof photos and videos to your Camera Roll and display them in the in-app album.</li>
+            <li><strong>Photo Library (NSPhotoLibraryUsageDescription &amp; NSPhotoLibraryAddUsageDescription):</strong> Optional permission used to automatically save your captured proof photos and videos to your Camera Roll (CameProof album) and keep deletions synchronized. If Photo Library access is denied in iOS Settings, proofs are saved only inside the CameProof app gallery.</li>
         </ul>
 
-        <h2>4. Third-Party Services & Subscriptions</h2>
+        <h2>4. Third-Party Services &amp; Subscriptions</h2>
         <ul>
-            <li><strong>In-App Purchases (StoreKit 2):</strong> Subscription transactions (CameProof Pro Weekly, Monthly, Yearly) are processed directly by Apple. We use Apple's private iCloud Key-Value Store (<code>NSUbiquitousKeyValueStore</code>) to securely recognize your active subscription across your personal devices under the same Apple ID.</li>
-            <li><strong>Advertising (Google AdMob):</strong> For non-paying (Free Tier) users, CameProof displays non-intrusive sponsor ads via Google Mobile Ads SDK. Google may use advertising identifiers subject to Apple's App Tracking Transparency (ATT) framework and Google's User Messaging Platform (UMP) GDPR/UK privacy consent. Subscribers of CameProof Pro receive a 100% ad-free experience.</li>
+            <li><strong>In-App Purchases (StoreKit 2):</strong> Subscription transactions (CameProof Pro Weekly, Monthly, Yearly) are processed and synced directly by Apple StoreKit 2 across your personal devices signed into the same Apple ID.</li>
+            <li><strong>Advertising (Google AdMob):</strong> For non-paying (Free Tier) users, CameProof displays non-intrusive sponsor ads via Google Mobile Ads SDK. Google may use advertising identifiers subject to Apple's App Tracking Transparency (ATT) framework and Google's User Messaging Platform (UMP) GDPR/UK privacy consent. Where required, EEA/UK and regulated users can update their consent anytime via <strong>Manage Ad Privacy Options</strong> in CameProof Settings. Subscribers of CameProof Pro receive a 100% ad-free experience.</li>
         </ul>
 
-        <h2>5. Data Retention & Deletion</h2>
-        <p>Because media is stored locally in your camera roll and app sandbox, you retain complete control over your content. Deleting a photo in CameProof or Apple Photos permanently erases it from your device.</p>
+        <h2>5. Data Retention &amp; Deletion</h2>
+        <p>Because media is stored locally on your device, you retain complete control over your content. When Photo Library access is granted, deleting a synced proof in CameProof or Apple Photos removes it from both locations. Please note that if Photo Library access is turned off in iOS Settings, proofs stored only inside the CameProof app will be permanently deleted if you uninstall CameProof.</p>
     </section>
 
     <!-- TERMS OF USE SECTION -->
@@ -342,17 +342,18 @@
         <h2>1. Acceptance of Terms</h2>
         <p>By downloading, installing, or using CameProof, you agree to be bound by these Terms of Use and the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" style="color: var(--primary);">Apple Standard Licensed Application End User License Agreement (EULA)</a>.</p>
 
-        <h2>2. Permitted Use & Evidence Integrity</h2>
-        <p>CameProof is designed as a tamper-resistant visual documentation tool. You agree not to misuse the application for fraudulent representation, unlawful surveillance, or infringement of third-party privacy rights. Stamped timestamps and coordinates reflect real-time device hardware readings at the moment of capture.</p>
+        <h2>2. Permitted Use &amp; Evidence Integrity Disclaimer</h2>
+        <p>CameProof is designed as a tamper-resistant visual documentation tool that permanently renders visible metadata onto captured photos and videos. You agree not to misuse the application for fraudulent representation, unlawful surveillance, or infringement of third-party privacy rights. Stamped timestamps and coordinates reflect real-time device hardware readings at the moment of capture, and do not constitute hardware cryptographic attestation or guarantee admissibility in court, arbitration, insurance, or regulatory proceedings.</p>
 
-        <h2>3. Subscriptions & Free Quota</h2>
+        <h2>3. Subscriptions, Free Trial &amp; Free Quota</h2>
         <ul>
             <li><strong>Free Tier:</strong> Free tier users receive 10 free verified captures per calendar day (resetting every midnight at 00:00 local device time) and up to 60 seconds per video capture. Free users can watch optional rewarded sponsor ads for bonus captures.</li>
-            <li><strong>CameProof Pro:</strong> Subscriptions (Weekly, Monthly, or Yearly auto-renewing) unlock unlimited captures, custom business branding/logos, extended video recording, and completely remove all advertisements. Subscriptions can be managed or canceled anytime via your Apple ID Settings.</li>
+            <li><strong>CameProof Pro Plans &amp; Free Trial:</strong> Weekly, Monthly, and Annual auto-renewing subscriptions (exact localized pricing shown in-app) unlock unlimited captures, custom business branding/logos, extended video recording, and completely remove all advertisements. Eligible new subscribers may redeem a 3-day free trial on the Annual Pro plan.</li>
+            <li><strong>Billing, Cancellation &amp; Refunds:</strong> Payment is charged to your Apple ID account at confirmation of purchase or after any eligible free trial ends, and auto-renews unless cancelled at least 24 hours before the end of the current period in iPhone Settings (<code>Settings &gt; Apple ID &gt; Subscriptions</code>). Tap <em>Restore</em> in the app to sync active entitlements across personal devices signed into the same Apple ID. All refund requests are handled directly by Apple at <a href="https://reportaproblem.apple.com" target="_blank" style="color: var(--primary);">reportaproblem.apple.com</a>.</li>
         </ul>
 
         <h2>4. Disclaimer of Warranties</h2>
-        <p>CameProof is provided on an "AS IS" and "AS AVAILABLE" basis. While our watermarking engine utilizes Apple's high-precision CoreLocation and clock frameworks, visual proofs are subject to ambient satellite availability and operating conditions.</p>
+        <p>CameProof is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. While our watermarking engine utilizes Apple's CoreLocation and system clock frameworks, visual proofs are subject to ambient satellite availability, network geocoding conditions, and device settings.</p>
     </section>
 
     <!-- SUPPORT SECTION -->
